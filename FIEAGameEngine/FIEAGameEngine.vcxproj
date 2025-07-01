@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8faad390-423a-46ca-8edf-c755e52b9c03}</ProjectGuid>
+    <RootNamespace>FIEA::Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\lib\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\build\$(ShortProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)-Debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\lib\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\build\$(ShortProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\lib\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\build\$(ShortProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)-Debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\lib\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\build\$(ShortProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>FIEA_DEBUG;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>FIEA_DEBUG;_CRT_SECURE_NO_WARNINGS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="include\FIEAGameEngine\FactoryService.cpp" />
+    <ClCompile Include="include\FIEAGameEngine\RTTI.cpp" />
+    <ClCompile Include="src\Action.cpp" />
+    <ClCompile Include="src\ActionList.cpp" />
+    <ClCompile Include="src\Actions\ActionAddDatum.cpp" />
+    <ClCompile Include="src\Actions\ActionCondition.cpp" />
+    <ClCompile Include="src\Actions\ActionConditionalIncrement.cpp" />
+    <ClCompile Include="src\Actions\ActionDecrement.cpp" />
+    <ClCompile Include="src\Actions\ActionDelayed.cpp" />
+    <ClCompile Include="src\Actions\ActionIncrement.cpp" />
+    <ClCompile Include="src\Actions\ActionLoopIncrement.cpp" />
+    <ClCompile Include="src\Actions\ActionPreamble.cpp" />
+    <ClCompile Include="src\Actions\ActionListWhileLoop.cpp" />
+    <ClCompile Include="src\Actions\ActionTimed.cpp" />
+    <ClCompile Include="src\Clock\ClockService.cpp" />
+    <ClCompile Include="src\Content\ActionHandler.cpp" />
+    <ClCompile Include="src\Content\ActionListHandler.cpp" />
+    <ClCompile Include="src\Content\ActionWhileParamHandler.cpp" />
+    <ClCompile Include="src\Content\Attributed.cpp" />
+    <ClCompile Include="src\Content\ContentService.cpp" />
+    <ClCompile Include="src\Content\Datum.cpp" />
+    <ClCompile Include="src\Content\GameObjectHandler.cpp" />
+    <ClCompile Include="src\Content\Parser.cpp" />
+    <ClCompile Include="src\Content\ParserWriter.cpp" />
+    <ClCompile Include="src\Content\PrimitiveTypeHandler.cpp" />
+    <ClCompile Include="src\Content\Scope.cpp" />
+    <ClCompile Include="src\Content\ScopeFactoryHandler.cpp" />
+    <ClCompile Include="src\Content\ScopeHandler.cpp" />
+    <ClCompile Include="src\Content\ScopeWriter.cpp" />
+    <ClCompile Include="src\Content\SpecialPrimitivesHandler.cpp" />
+    <ClCompile Include="src\FIEAGameEngine.cpp" />
+    <ClCompile Include="src\GameObject.cpp" />
+    <ClCompile Include="src\Memory\Heap.cpp" />
+    <ClCompile Include="src\Memory\MemoryService.cpp" />
+    <ClCompile Include="src\Memory\Tracker.cpp" />
+    <ClCompile Include="src\ServiceMgr.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\FIEAGameEngine\Action.h" />
+    <ClInclude Include="include\FIEAGameEngine\ActionList.h" />
+    <ClInclude Include="include\FIEAGameEngine\ClockService.h" />
+    <ClInclude Include="include\FIEAGameEngine\FactoryService.h" />
+    <ClInclude Include="include\FIEAGameEngine\GameObject.h" />
+    <ClInclude Include="include\FIEAGameEngine\List.h" />
+    <ClInclude Include="include\FIEAGameEngine\MemoryService.h" />
+    <ClInclude Include="include\FIEAGameEngine\RTTI.h" />
+    <ClInclude Include="include\FIEAGameEngine\ServiceMgr.h" />
+    <ClInclude Include="include\FIEAGameEngine\Timer.h" />
+    <ClInclude Include="include\FIEAGameEngine\Types.h" />
+    <ClInclude Include="include\Content\Attributed.h" />
+    <ClInclude Include="include\FIEAGameEngine\ContentService.h" />
+    <ClInclude Include="include\Content\Datum.h" />
+    <ClInclude Include="include\Content\Scope.h" />
+    <ClInclude Include="src\Actions\ActionAddDatum.h" />
+    <ClInclude Include="src\Actions\ActionCondition.h" />
+    <ClInclude Include="src\Actions\ActionConditionalIncrement.h" />
+    <ClInclude Include="src\Actions\ActionDecrement.h" />
+    <ClInclude Include="src\Actions\ActionDelayed.h" />
+    <ClInclude Include="src\Actions\ActionIncrement.h" />
+    <ClInclude Include="src\Actions\ActionLoopIncrement.h" />
+    <ClInclude Include="src\Actions\ActionPreamble.h" />
+    <ClInclude Include="src\Actions\ActionListWhileLoop.h" />
+    <ClInclude Include="src\Actions\ActionTimed.h" />
+    <ClInclude Include="src\Content\ActionHandler.h" />
+    <ClInclude Include="src\Content\ActionListHandler.h" />
+    <ClInclude Include="src\Content\ActionWhileParamHandler.h" />
+    <ClInclude Include="src\Content\GameObjectHandler.h" />
+    <ClInclude Include="src\Content\Parser.h" />
+    <ClInclude Include="src\Content\PrimitiveTypeHandler.h" />
+    <ClInclude Include="src\Content\ScopeFactoryHandler.h" />
+    <ClInclude Include="src\Content\ScopeHandler.h" />
+    <ClInclude Include="src\Content\ScopeWriter.h" />
+    <ClInclude Include="src\Content\SpecialPrimitivesHandler.h" />
+    <ClInclude Include="src\Memory\Heap.h" />
+    <ClInclude Include="src\Memory\SystemAllocator.h" />
+    <ClInclude Include="src\Memory\Tracker.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\FIEAGameEngine\List.inl" />
+    <None Include="include\FIEAGameEngine\RTTI.inl" />
+    <None Include="include\Content\Datum.inl" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\JsonCpp.Windows.1.9.2\build\JsonCpp.Windows.targets" Condition="Exists('..\packages\JsonCpp.Windows.1.9.2\build\JsonCpp.Windows.targets')" />
+    <Import Project="..\packages\glm.1.0.1\build\native\glm.targets" Condition="Exists('..\packages\glm.1.0.1\build\native\glm.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\JsonCpp.Windows.1.9.2\build\JsonCpp.Windows.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\JsonCpp.Windows.1.9.2\build\JsonCpp.Windows.targets'))" />
+    <Error Condition="!Exists('..\packages\glm.1.0.1\build\native\glm.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\glm.1.0.1\build\native\glm.targets'))" />
+  </Target>
+</Project>

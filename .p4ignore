@@ -1,0 +1,16 @@
+# VS intermediate files
+build/
+lib/
+bin/
+Debug/
+.vs/
+*.bin
+*.vcxproj.filters
+*.vcxproj.user
+*.tlog
+*.obj
+*.lib
+*.pdb
+*.log
+*.recipe
+.coverage
